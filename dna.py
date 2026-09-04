@@ -6,7 +6,7 @@ DNA
 def longest_subsequence(string_1, string_2):
     string_1, string_2 = string_1.upper(), string_2.upper()
     found = set()
-    max = 0
+    maxs = 0
     #iterate through all string1
     for i in range(len(string_1)):
         #iterate through all ending and only substrings with length greater than 2
@@ -15,14 +15,13 @@ def longest_subsequence(string_1, string_2):
             #Check if the substring is also in string 2
             if substring in string_2:
                 #if the substring is longest add to max and reset set
-                if len(substring) > max:
-                    max = len(substring)
+                if len(substring) > maxs:
+                    maxs = len(substring)
                     found = {substring}
                 #If we find another substring with same length add it to set
-                elif len(substring) == max:
+                elif len(substring) == maxs:
                     found.add(substring)
     return sorted(list(found))
-    
 def main():
     """
     This main function reads the data input files and
