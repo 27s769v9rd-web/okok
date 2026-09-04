@@ -17,10 +17,10 @@ def longest_subsequence(string_1, string_2):
                 #if the substring is longest add to max and reset set
                 if len(substring) > max:
                     max = len(substring)
-                    found = {sub}
+                    found = {substring}
                 #If we find another substring with same length add it to set
                 elif len(substring) == max:
-                    found.add(sub)
+                    found.add(substring)
     return sorted(list(found))
     
 def main():
