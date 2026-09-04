@@ -4,6 +4,9 @@ DNA
 
 
 def longest_subsequence(string_1, string_2):
+    """
+    Finds the longest substring between two strings substrings have to be more than 2 characters. 
+    """
     string_1, string_2 = string_1.upper(), string_2.upper()
     found = set()
     maxs = 0
